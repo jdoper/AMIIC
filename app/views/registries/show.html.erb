@@ -1,0 +1,89 @@
+<div class="container">
+  <% if notice %>
+    <div class="alert alert-success alert-dismissible">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <%= notice %>
+    </div>
+  <% end %>
+
+  <h2 class="name-header"><%= @registry.nome %></h2>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">Informações</div>
+
+    <table class="table table-bordered">
+      <tbody>
+        <tr>
+          <div class="row">
+            <td class="col-md-3">Idade</td>
+            <td class="col-md-9"><%= @registry.idade %></td>
+          </div>
+        </tr>
+        <tr>
+          <div class="row">
+            <td class="col-md-3">Sexo</td>
+            <td class="col-md-9"><%= @registry.sexo %></td>
+          </div>
+        </tr>
+        <tr>
+          <div class="row">
+            <td class="col-md-3">Registro Hospitalar</td>
+            <td class="col-md-9"><%= @registry.registro %></td>
+          </div>
+        </tr>
+        <tr>
+          <div class="row">
+            <td class="col-md-3">Data de Cadastro</td>
+            <td class="col-md-9"><%= @registry.data %></td>
+          </div>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">Questionário</div>
+    <% if @questoes.size == 0 %>
+      <div class="panel-body">
+        O questionário não foi realizado
+      </div>
+    <% else %>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Score</th>
+            <% for num in 1..21 %>
+              <th><%= num %></th>
+            <% end %>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= @registry.score %></td>
+            <% @questoes.each do |questao| %>
+              <% if questao.numero != 22 %>
+                <td><%= questao.resposta %></td>
+              <% end %>
+            <% end %>
+          </tr>
+        </tbody>
+      </table>
+    <% end %>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">Observações</div>
+    <div class="panel-body">
+      <% if @questoes.size == 0 %>
+        O questionário não foi realizado
+      <% else %>
+        <%= @questoes.last.resposta %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="separador">
+    <%= link_to 'Excluir', @registry, method: :delete, data: { confirm: 'Tem certeza?' }, :class => 'btn btn-danger' %>
+    <%= link_to 'Voltar', :back, :class => 'btn btn-primary' %>
+  </div>
+</div>

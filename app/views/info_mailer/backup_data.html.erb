@@ -1,0 +1,25 @@
+<h1>Backup de dados</h1>
+
+<% @registros.each do |cadastro|%>
+<p>
+	<%= cadastro.nome << "," %>
+	<%= cadastro.idade.to_s << "," %>
+	<%= cadastro.data.to_s << "," %>
+	<%= cadastro.sexo.to_s << "," %>
+	<%= cadastro.registro.to_s << "," %>
+	<%= cadastro.tipoInsuficiencia.to_s << "," %>
+	<%= cadastro.etiologia.to_s << "," %>
+	<%= cadastro.classFuncional.to_s << "," %>
+	<%= cadastro.feve.to_s << "," %>
+	<%= cadastro.tempoUsado.to_s << "," %>
+	<%= cadastro.score.to_s << "," %>
+	<%= cadastro.serial.to_s << "," %>
+</p>
+<% end %>
+
+<% @questoes.each do |questao|%>
+	<%= questao.resposta.to_s << "," %>
+	<% if questao.numero == 22 %>
+		<%= "|" %>
+	<% end %>
+<% end %>

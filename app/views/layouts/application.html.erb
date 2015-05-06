@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>AMIIC</title>
+	    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body style="background: #F8F8F8">
+		<% if user_signed_in? %>
+			<div class="nav-background">
+				<nav class="navbar navbar-inverse">
+					<div class="container">
+						<div class="navbar-header">
+							<%= link_to 'AMIIC', root_url, :class => 'navbar-brand' %>
+						</div>
+						<div id="navbar" class="collapse navbar-collapse">
+							<ul class="nav navbar-nav">
+								<li><%= link_to 'Home', registries_path %></li>
+								<li><%= link_to 'Busca', home_search_path %></li>
+								<% if current_user.admin? %>
+									<li><%= link_to 'Administrativo', home_admin_path %></li>
+								<% end %>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li><%= link_to 'Editar conta', edit_user_registration_path %></li>
+								<li><a href="/logout">Sair</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+		<% end %>
+
+		<%= yield %>
+	</body>
+</html>

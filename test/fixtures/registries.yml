@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  idade: 1
+  data: MyString
+  sexo: 1
+  registro: 1
+  tipoInsuficiencia: 1
+  etiologia: 1
+  classFuncional: 1
+  FEVE: 1
+  tempoUsado: 1
+  score: 1
+  serial: MyString
+
+two:
+  nome: MyString
+  idade: 1
+  data: MyString
+  sexo: 1
+  registro: 1
+  tipoInsuficiencia: 1
+  etiologia: 1
+  classFuncional: 1
+  FEVE: 1
+  tempoUsado: 1
+  score: 1
+  serial: MyString

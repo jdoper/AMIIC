@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cadastro: 1
+  numero: 1
+  resposta: MyText
+
+two:
+  cadastro: 1
+  numero: 1
+  resposta: MyText

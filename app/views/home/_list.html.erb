@@ -1,0 +1,19 @@
+<div class="list-group">
+  <% if @cadastros.size == 0 %>
+    <ul class="list-group">
+      <li class="list-group-item">
+        Nenhum cadastro encontrado
+    </ul>
+  <% else %>
+    <% @cadastros.each do |cadastro| %>
+      <%= link_to cadastro, :class => "list-group-item" do %>
+        <h4 class="list-group-item-heading">
+          Nome: <%= cadastro.nome %>
+        </h4>
+        <p class="list-group-item-text">
+          N° Registro: <%= cadastro.registro %>
+        </p>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
