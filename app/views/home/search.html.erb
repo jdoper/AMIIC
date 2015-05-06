@@ -3,7 +3,7 @@
 
 	<%= form_tag('/buscar', remote: true) %>
 		<div class="form-group">
-			<%= number_field_tag :registro, nil, class: 'form-control' %>
+			<%= number_field_tag :registro, nil, :placeholder => 'Registro Hospitalar', class: 'form-control' %>
 		</div>
 		<div class="form-group">
 			<%= submit_tag "Buscar", :class => 'btn btn-success' %>

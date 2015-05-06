@@ -70,6 +70,7 @@ class RegistriesController < ApplicationController
   # DELETE /registries/1
   # DELETE /registries/1.json
   def destroy
+    Question.where(serial: @registry.serial).delete_all
     @registry.destroy
     respond_to do |format|
       format.html { redirect_to registries_url, notice: 'Cadastro excluido com sucesso' }
