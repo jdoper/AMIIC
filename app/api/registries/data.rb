@@ -71,5 +71,19 @@ module Registries
 				Question.where(serial: params[:serial]).delete_all
 			end
 		end
+
+		resource :add_admin do
+			desc "Torna o usuário um administrador do sistema"
+			params do
+				requires :email, type: String
+			end
+			post do
+				user = User.where(email: params[:email])
+				if not user.nil?
+					user[0].update_attribute :admin, true
+					user[0].save
+				end
+			end
+		end
 	end
 end
