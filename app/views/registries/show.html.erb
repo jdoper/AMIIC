@@ -8,8 +8,9 @@
 
   <h2 class="name-header"><%= @registry.nome %></h2>
 
+  <!-- Panel 1 -->
   <div class="panel panel-default">
-    <div class="panel-heading">Informações</div>
+    <div class="panel-heading">Informações Pessoais</div>
 
     <table class="table table-bordered">
       <tbody>
@@ -41,6 +42,47 @@
     </table>
   </div>
 
+  <!-- Panel 2 -->
+  <div class="panel panel-default">
+    <div class="panel-heading">Caracterização da Doença</div>
+
+    <table class="table table-bordered">
+      <tbody>
+        <tr>
+          <div class="row">
+            <td class="col-md-3">Tipo de Insuficiência</td>
+            <td class="col-md-9"><%= @registry.tipoInsuficiencia %></td>
+          </div>
+        </tr>
+        <tr>
+          <div class="row">
+            <td class="col-md-3">Etiologia</td>
+            <td class="col-md-9">
+              <% if @registry.etiologia != 99 %>
+                <%= @registry.etiologia %> (<%= @etiologias[@registry.etiologia-1] %>)
+              <% else %>
+                <%= @registry.etiologia %> (Não Informado)
+              <% end %>
+            </td>
+          </div>
+        </tr>
+        <tr>
+          <div class="row">
+            <td class="col-md-3">Classe Funcional</td>
+            <td class="col-md-9"><%= @registry.classFuncional %></td>
+          </div>
+        </tr>
+        <tr>
+          <div class="row">
+            <td class="col-md-3">FEVE</td>
+            <td class="col-md-9"><%= @registry.feve %>%</td>
+          </div>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Panel 3 -->
   <div class="panel panel-default">
     <div class="panel-heading">Questionário</div>
     <% if @questoes.size == 0 %>

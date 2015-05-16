@@ -13,7 +13,8 @@ class RegistriesController < ApplicationController
   # GET /registries/1.json
   def show
     @questoes = Question.where(serial: @registry.serial).order(:numero)
-    
+    @etiologias = ["CMP Primária","CMP Isquêmica","CMP Hipertensiva","CMP Valvar","CMP Hipertrófica","CMP Alcoólica","CMP Congênita","Outras","Chagásica","Periparto"]
+
     # Caso o cadastro seja enviado antes de realizar o questionário
     # é necessário atualizar o valor do score do Cadastro(@registry)
     if @questoes.size > 0
