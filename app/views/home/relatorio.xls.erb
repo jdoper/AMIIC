@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+		<Cell><Data ss:Type="String">N</Data></Cell>
+		<Cell><Data ss:Type="String">Data</Data></Cell>
+		<Cell><Data ss:Type="String">Nome</Data></Cell>
+		<Cell><Data ss:Type="String">RH</Data></Cell>
+		<Cell><Data ss:Type="String">ID</Data></Cell>
+		<Cell><Data ss:Type="String">Sexo</Data></Cell>
+		<Cell><Data ss:Type="String">Tipo de IC</Data></Cell>
+		<Cell><Data ss:Type="String">Etiologia</Data></Cell>
+		<Cell><Data ss:Type="String">CF</Data></Cell>
+		<Cell><Data ss:Type="String">FEVE</Data></Cell>
+		<Cell><Data ss:Type="String">FEVE(RI)</Data></Cell>
+		<Cell><Data ss:Type="Number">1</Data></Cell>
+		<Cell><Data ss:Type="Number">2</Data></Cell>
+		<Cell><Data ss:Type="Number">3</Data></Cell>
+		<Cell><Data ss:Type="Number">4</Data></Cell>
+		<Cell><Data ss:Type="Number">5</Data></Cell>
+		<Cell><Data ss:Type="Number">6</Data></Cell>
+		<Cell><Data ss:Type="Number">7</Data></Cell>
+		<Cell><Data ss:Type="Number">8</Data></Cell>
+		<Cell><Data ss:Type="Number">9</Data></Cell>
+		<Cell><Data ss:Type="Number">10</Data></Cell>
+		<Cell><Data ss:Type="Number">11</Data></Cell>
+		<Cell><Data ss:Type="Number">12</Data></Cell>
+		<Cell><Data ss:Type="Number">13</Data></Cell>
+		<Cell><Data ss:Type="Number">14</Data></Cell>
+		<Cell><Data ss:Type="Number">15</Data></Cell>
+		<Cell><Data ss:Type="Number">16</Data></Cell>
+		<Cell><Data ss:Type="Number">17</Data></Cell>
+		<Cell><Data ss:Type="Number">18</Data></Cell>
+		<Cell><Data ss:Type="Number">19</Data></Cell>
+		<Cell><Data ss:Type="Number">20</Data></Cell>
+		<Cell><Data ss:Type="Number">21</Data></Cell>
+		<Cell><Data ss:Type="Number">22</Data></Cell>
+		<Cell><Data ss:Type="String">Score</Data></Cell>
+      </Row>
+    <% @registros.each do |registro| %>
+      <Row>
+		<Cell><Data ss:Type="String"><%= registro.id %></Data></Cell>
+		<Cell><Data ss:Type="String"><%= registro.data %></Data></Cell>
+		<Cell><Data ss:Type="String"><%= registro.nome %></Data></Cell>
+		<Cell><Data ss:Type="Number"><%= registro.registro %></Data></Cell>
+		<Cell><Data ss:Type="Number"><%= registro.idade %></Data></Cell>
+		<Cell><Data ss:Type="Number"><%= registro.sexo %></Data></Cell>
+		<Cell><Data ss:Type="Number"><%= registro.tipoInsuficiencia %></Data></Cell>
+		<Cell><Data ss:Type="Number"><%= registro.etiologia %></Data></Cell>
+		<Cell><Data ss:Type="Number"><%= registro.classFuncional %></Data></Cell>
+		<Cell><Data ss:Type="Number"><%= registro.feve %></Data></Cell>
+		<Cell><Data ss:Type="Number">99</Data></Cell>
+
+		<% @questoes.each do |questao| %>
+	  	  <% if questao.serial == registro.serial %>
+	  	  	<Cell><Data ss:Type="Number"><%= questao.resposta %></Data></Cell>
+	  	  <% end %>
+  	  	<% end %>
+
+  	  	<Cell><Data ss:Type="Number"><%= registro.score %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>
+
