@@ -36,7 +36,6 @@ module Registries
 					score:params[:score],
 					serial:params[:serial]
 				})
-				InfoMailer.backup_data.deliver if Registry.all.size % 10 == 0
 			end
 		end
 
