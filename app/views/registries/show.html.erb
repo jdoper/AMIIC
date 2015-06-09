@@ -9,7 +9,7 @@
   <h2 class="name-header"><%= @registry.nome %></h2>
 
   <!-- Panel 1 -->
-  <div class="panel panel-default">
+  <div class="panel panel-success">
     <div class="panel-heading">Informações Pessoais</div>
 
     <table class="table table-bordered">
@@ -43,7 +43,7 @@
   </div>
 
   <!-- Panel 2 -->
-  <div class="panel panel-default">
+  <div class="panel panel-success">
     <div class="panel-heading">Caracterização da Doença</div>
 
     <table class="table table-bordered">
@@ -83,7 +83,7 @@
   </div>
 
   <!-- Panel 3 -->
-  <div class="panel panel-default">
+  <div class="panel panel-success">
     <div class="panel-heading">Questionário</div>
     <% if @questoes.size == 0 %>
       <div class="panel-body">
@@ -113,7 +113,7 @@
     <% end %>
   </div>
 
-  <div class="panel panel-default">
+  <div class="panel panel-success">
     <div class="panel-heading">Observações</div>
     <div class="panel-body">
       <% if @questoes.size == 0 %>

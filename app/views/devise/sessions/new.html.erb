@@ -8,7 +8,10 @@
 </div>
 
 <div class="container login_box" style="width:375px;">
-  <h2>AMIIC - HUOL</h2>
+  <center>
+    <%= image_tag("ic_amiic", size: "200x158", alt: "Logo AMIIC") %>
+    <h3>AMIIC - HUOL</h3>
+  </center>
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field_login">
@@ -31,7 +34,7 @@
   -->
 
     <div class="field_login button_login">
-      <%= f.submit "Login", :class => 'btn btn-primary btn-block' %>
+      <%= f.submit "Login", :class => 'btn btn-success btn-block' %>
     </div>
   <% end %>
 </div>
