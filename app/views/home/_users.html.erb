@@ -10,6 +10,23 @@
 
   <tbody>
     <% @users.each do |user| %>
+      <% if user.admin %>
+        <tr>
+          <td class="center-text"><%= user.id %></td>
+          <td class="center-text"><%= user.email %></td>
+          <td class="center-text">Sim</td>
+          <td class="center-text"><%= link_to "Excluir", home_excluirUsuario_path(:id => user.id), method: :post, data: { confirm: 'Deseja realmente excluir o usuário?' }, remote: true %></td>
+        </tr>
+      <% else %>
+        <tr>
+          <td class="center-text"><%= user.id %></td>
+          <td class="center-text"><%= user.email %></td>
+          <td class="center-text">Não</td>
+          <td class="center-text"><%= link_to "Excluir", home_excluirUsuario_path(:id => user.id), method: :post, data: { confirm: 'Deseja realmente excluir o usuário?' }, remote: true %></td>
+        </tr>
+      <% end %>
+
+      <!--
       <tr>
         <td class="center-text"><%= user.id %></td>
         <td class="center-text"><%= user.email %></td>
@@ -22,6 +39,8 @@
         </td>
         <td class="center-text"><%= link_to "Excluir", home_excluirUsuario_path(:id => user.id), method: :post, data: { confirm: 'Deseja realmente excluir o usuário?' }, remote: true %></td>
       </tr>
+      -->
+
     <% end %>
   </tbody>
 </table>
