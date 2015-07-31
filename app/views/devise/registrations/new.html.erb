@@ -1,5 +1,11 @@
 <div class="container new_user_box" style="width:450px;">
-  <h2>Novo usuário</h2>
+  <center>
+    <h2>Novo Usuário</h2>
+    <p>
+      Para poder acessar o sistema, sua conta deve ser ativada por um administrador
+    </p>
+  </center>
+
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
