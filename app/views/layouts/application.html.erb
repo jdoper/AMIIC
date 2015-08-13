@@ -6,10 +6,10 @@
 		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 		<%= csrf_meta_tags %>
 	</head>
-	<body style="background: #F8F8F8">
+	<body>
 		<% if user_signed_in? %>
 			<div class="nav-background">
-				<nav class="navbar navbar-inverse">
+				<nav class="navbar navbar-inverse navbar-fixed-top">
 					<div class="container">
 						<div class="navbar-header">
 							<b><%= link_to 'QUIC', root_url, :class => 'navbar-brand' %></b>
@@ -32,6 +32,15 @@
 			</div>
 		<% end %>
 
-		<%= yield %>
+		<div class="corpo">
+			<%= yield %>
+		</div>
+
+		<footer>
+			<div class="container">
+				<!-- <p>&copy; Pedro Araújo</p> -->
+				<img src=<%=asset_path("institucional.png")%> alt="Logo UFRN e HUOL" />
+			</div>
+		</footer>
 	</body>
 </html>

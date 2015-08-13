@@ -1,3 +1,65 @@
+/* Geral */
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+}
+
+.name-header {
+  border-bottom: 1px solid #CCC;
+  padding-bottom: 5px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.separador {
+  border-top: 1px solid #CCC;
+  padding-top: 15px;
+  margin-bottom: 20px;
+}
+
+thead {
+  background-color: #EEE;
+}
+
+tbody {
+  background: white;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.nav-background {
+  height: 54px;
+  margin-bottom: 25px;
+}
+
+.corpo {
+  margin: 0 auto;
+  width: 94%;
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+  background-color: #efefef;
+}
+
+footer img {
+  height: 60px;
+}
+
+
 /* Tela de login */
 .login_box {
   margin-top: 130px;
@@ -34,64 +96,4 @@
   -webkit-box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.75);
   -moz-box-shadow:    4px 4px 10px 0px rgba(50, 50, 50, 0.75);
   box-shadow:         4px 4px 10px 0px rgba(50, 50, 50, 0.75);
-}
-
-
-/* Geral */
-html {
-  height: 100%;
-}
-
-body {
-  position: relative;
-  margin: 0;
-  padding-bottom: 6rem;
-  min-height: 100%;
-}
-
-.name-header {
-  border-bottom: 1px solid #CCC;
-  padding-bottom: 5px;
-  margin-top: 15px;
-  margin-bottom: 25px;
-}
-
-.separador {
-  border-top: 1px solid #CCC;
-  padding-top: 15px;
-  margin-bottom: 20px;
-}
-
-thead, tbody {
-  background: white;
-}
-
-.center-text {
-  text-align: center;
-}
-
-.nav-background {
-  background: #292929;
-  height: 54px;
-  border-bottom: 2px solid #389A42;
-  margin-bottom: 25px;
-}
-
-.corpo {
-  margin: 0 auto;
-  width: 94%;
-}
-
-footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  text-align: center;
-  background-color: #efefef;
-}
-
-footer img {
-  height: 60px;
 }
