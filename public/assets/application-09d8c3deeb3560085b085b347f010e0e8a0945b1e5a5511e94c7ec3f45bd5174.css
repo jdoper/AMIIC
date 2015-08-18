@@ -8598,3 +8598,41 @@ button.close {
     display: none !important;
   }
 }
+
+
+.navbar-inverse {
+  background-color: #389a42;
+  border-color: #2f8238;
+}
+
+.navbar-header .navbar-brand {
+  color: #FFF;
+}
+
+.navbar-header .navbar-brand:hover {
+  color: #CCC;
+}
+
+.navbar-inverse .navbar-nav li a {
+  color: #FFF;
+}
+
+.navbar-inverse .navbar-nav li a:hover {
+  color: #CCC;
+}
+
+.navbar-inverse .navbar-nav li .active a {
+  color: #FFF;
+}
+
+.navbar-inverse .navbar-nav .active a:hover {
+  color: #000;
+}
+
+.navbar-inverse .navbar-nav .active .link-active {
+  background-color: #4EAA5F;
+}
+
+.navbar-inverse .navbar-nav .active .link-active:hover {
+  background-color: #7BBD7D;
+}
