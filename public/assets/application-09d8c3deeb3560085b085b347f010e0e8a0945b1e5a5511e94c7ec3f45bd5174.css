@@ -8636,3 +8636,25 @@ button.close {
 .navbar-inverse .navbar-nav .active .link-active:hover {
   background-color: #7BBD7D;
 }
+
+.header {
+  margin-bottom: 90px;
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+  background-color: #efefef;
+}
+
+footer img {
+  height: 60px;
+}
+
+#logo-footer {
+  background-image: image-url("institucional.png")
+}
