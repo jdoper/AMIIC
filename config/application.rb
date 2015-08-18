@@ -1,7 +1,6 @@
 require File.expand_path('../boot', __FILE__)
 
-# require 'rails/all'
-require 'sprocket/railtie'
+require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -43,6 +42,6 @@ module AMIIC
     # Para debug apenas, é melhor que a linha abaixo seja adicionado apenas no ambiente de desenvolvimento
     config.action_mailer.raise_delivery_errors = true
 
-    config.assets.debug = false
+    config.assets.compile = true
   end
 end
