@@ -1,42 +1,24 @@
 @charset "UTF-8";
-/* Tela de login */
-/* line 3, /home/pedro/Documentos/AMIIC/app/assets/stylesheets/scaffolds.scss */
-.login_box {
-  margin-top: 130px;
-  background: white;
-  box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.75);
-}
-
-/* line 11, /home/pedro/Documentos/AMIIC/app/assets/stylesheets/scaffolds.scss */
-img {
-  padding-top: 15px;
-}
-
-/* line 15, /home/pedro/Documentos/AMIIC/app/assets/stylesheets/scaffolds.scss */
-h3 {
-  padding-bottom: 10px;
-}
-
-/* line 19, /home/pedro/Documentos/AMIIC/app/assets/stylesheets/scaffolds.scss */
-.field_login {
-  margin-top: 15px;
-}
-
-/* line 23, /home/pedro/Documentos/AMIIC/app/assets/stylesheets/scaffolds.scss */
-.button_login {
-  margin-bottom: 15px;
-}
-
-/* Novo usuário */
-/* line 29, /home/pedro/Documentos/AMIIC/app/assets/stylesheets/scaffolds.scss */
-.new_user_box {
-  margin-top: 170px;
-  background: white;
-  box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.75);
-}
-
 /* Geral */
-/* line 39, /home/pedro/Documentos/AMIIC/app/assets/stylesheets/scaffolds.scss */
+/* line 3, /home/pedro/Documentos/amiic/app/assets/stylesheets/scaffolds.scss */
+html {
+  height: 100%;
+}
+
+/* line 7, /home/pedro/Documentos/amiic/app/assets/stylesheets/scaffolds.scss */
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+}
+
+/* line 14, /home/pedro/Documentos/amiic/app/assets/stylesheets/scaffolds.scss */
+.header {
+  margin-bottom: 90px;
+}
+
+/* line 18, /home/pedro/Documentos/amiic/app/assets/stylesheets/scaffolds.scss */
 .name-header {
   border-bottom: 1px solid #CCC;
   padding-bottom: 5px;
@@ -44,29 +26,87 @@ h3 {
   margin-bottom: 25px;
 }
 
-/* line 46, /home/pedro/Documentos/AMIIC/app/assets/stylesheets/scaffolds.scss */
+/* line 25, /home/pedro/Documentos/amiic/app/assets/stylesheets/scaffolds.scss */
 .separador {
   border-top: 1px solid #CCC;
   padding-top: 15px;
   margin-bottom: 20px;
 }
 
-/* line 52, /home/pedro/Documentos/AMIIC/app/assets/stylesheets/scaffolds.scss */
-thead, tbody {
+/* line 31, /home/pedro/Documentos/amiic/app/assets/stylesheets/scaffolds.scss */
+thead {
+  background-color: #EEE;
+}
+
+/* line 35, /home/pedro/Documentos/amiic/app/assets/stylesheets/scaffolds.scss */
+tbody {
   background: white;
 }
 
-/* line 56, /home/pedro/Documentos/AMIIC/app/assets/stylesheets/scaffolds.scss */
+/* line 39, /home/pedro/Documentos/amiic/app/assets/stylesheets/scaffolds.scss */
 .center-text {
   text-align: center;
 }
 
-/* line 60, /home/pedro/Documentos/AMIIC/app/assets/stylesheets/scaffolds.scss */
-.nav-background {
-  background: #292929;
-  height: 54px;
-  border-bottom: 2px solid #389A42;
-  margin-bottom: 25px;
+/* line 43, /home/pedro/Documentos/amiic/app/assets/stylesheets/scaffolds.scss */
+.corpo {
+  margin: 0 auto;
+  width: 94%;
+}
+
+/* line 48, /home/pedro/Documentos/amiic/app/assets/stylesheets/scaffolds.scss */
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+  background-color: #efefef;
+}
+
+/* line 58, /home/pedro/Documentos/amiic/app/assets/stylesheets/scaffolds.scss */
+footer img {
+  height: 60px;
+}
+
+/* Tela de login */
+/* line 64, /home/pedro/Documentos/amiic/app/assets/stylesheets/scaffolds.scss */
+.login_box {
+  margin-top: 130px;
+  margin-bottom: 130px;
+  background: white;
+  box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.75);
+}
+
+/* line 73, /home/pedro/Documentos/amiic/app/assets/stylesheets/scaffolds.scss */
+.login_box img {
+  padding-top: 15px;
+}
+
+/* line 77, /home/pedro/Documentos/amiic/app/assets/stylesheets/scaffolds.scss */
+.login_box h3 {
+  padding-bottom: 10px;
+  color: #228C67;
+  text-shadow: 2px 2px #DDD;
+}
+
+/* line 83, /home/pedro/Documentos/amiic/app/assets/stylesheets/scaffolds.scss */
+.field_login {
+  margin-top: 15px;
+}
+
+/* line 87, /home/pedro/Documentos/amiic/app/assets/stylesheets/scaffolds.scss */
+.button_login {
+  margin-bottom: 15px;
+}
+
+/* Novo usuário */
+/* line 93, /home/pedro/Documentos/amiic/app/assets/stylesheets/scaffolds.scss */
+.new_user_box {
+  margin-top: 170px;
+  background: white;
+  box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.75);
 }
 @charset "UTF-8";
 /* This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -89,15 +129,11 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  height: 100%;
 }
 
 /* line 19, /home/pedro/.rvm/gems/ruby-2.2.2/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_normalize.scss */
 body {
-  position: relative;
   margin: 0;
-  padding-bottom: 6rem;
-  min-height: 100%;
 }
 
 /* line 33, /home/pedro/.rvm/gems/ruby-2.2.2/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_normalize.scss */
@@ -8602,63 +8638,48 @@ button.close {
     display: none !important;
   }
 }
-
-
+/* line 21, /home/pedro/Documentos/amiic/app/assets/stylesheets/application.css.sass */
 .navbar-inverse {
   background-color: #389a42;
   border-color: #2f8238;
 }
 
+/* line 25, /home/pedro/Documentos/amiic/app/assets/stylesheets/application.css.sass */
 .navbar-header .navbar-brand {
   color: #FFF;
 }
 
+/* line 28, /home/pedro/Documentos/amiic/app/assets/stylesheets/application.css.sass */
 .navbar-header .navbar-brand:hover {
   color: #CCC;
 }
 
+/* line 31, /home/pedro/Documentos/amiic/app/assets/stylesheets/application.css.sass */
 .navbar-inverse .navbar-nav li a {
   color: #FFF;
 }
 
+/* line 34, /home/pedro/Documentos/amiic/app/assets/stylesheets/application.css.sass */
 .navbar-inverse .navbar-nav li a:hover {
   color: #CCC;
 }
 
+/* line 37, /home/pedro/Documentos/amiic/app/assets/stylesheets/application.css.sass */
 .navbar-inverse .navbar-nav li .active a {
   color: #FFF;
 }
 
+/* line 40, /home/pedro/Documentos/amiic/app/assets/stylesheets/application.css.sass */
 .navbar-inverse .navbar-nav .active a:hover {
   color: #000;
 }
 
+/* line 43, /home/pedro/Documentos/amiic/app/assets/stylesheets/application.css.sass */
 .navbar-inverse .navbar-nav .active .link-active {
   background-color: #4EAA5F;
 }
 
+/* line 46, /home/pedro/Documentos/amiic/app/assets/stylesheets/application.css.sass */
 .navbar-inverse .navbar-nav .active .link-active:hover {
   background-color: #7BBD7D;
-}
-
-.header {
-  margin-bottom: 90px;
-}
-
-footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  text-align: center;
-  background-color: #efefef;
-}
-
-footer img {
-  height: 60px;
-}
-
-#logo-footer {
-  background-image: image-url("institucional.png")
 }
