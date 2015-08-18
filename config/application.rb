@@ -36,10 +36,12 @@ module AMIIC
       :user_name            => 'atomas395',
       :password             => '#d9d8K7!',
       :authentication       => 'plain',
-      :enable_starttls_auto => true 
+      :enable_starttls_auto => true
     }
-    
+
     # Para debug apenas, é melhor que a linha abaixo seja adicionado apenas no ambiente de desenvolvimento
     config.action_mailer.raise_delivery_errors = true
+
+    config.assets.debug = false
   end
 end
